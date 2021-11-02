@@ -84,7 +84,21 @@ header{
 .no-underline{
     text-decoration: none;
 }
-
+.animate-color{
+    /*  set property  */
+    transition-property: color, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0ms;
+}
+.animate-color-bc{
+    /*  set property  */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+.animate-shadow{
+    /*  set property  */
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .header-item-text.current-page,
 .active-link:hover,
 .active-link:focus{
@@ -93,9 +107,13 @@ header{
 .btn{
     cursor: pointer;
 }
+.animate-btn{
+    /*  set property  */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .active-btn:hover,
 .active-btn:focus{
-    background: var(--active);
+    background-color: var(--active);
     color: var(--first-color-white);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
@@ -113,6 +131,9 @@ header{
 .with-border{
     border: 1px solid var(--icon-color);
     border-radius: 4px;
+
+    /*  set property  */
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .with-border:hover,
 .with-border:focus{
@@ -192,7 +213,7 @@ header{
 .header-contacts{
     display: flex;
 }
-
+/* ---------- nav ---------- */
 .header-item-text{
     font-weight: 500;
     font-size: 14px;
