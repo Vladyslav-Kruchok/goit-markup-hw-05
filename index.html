@@ -78,7 +78,7 @@
         <div class="content-overlay">
           <!-- web-stud-main-content-title -->
           <h1 class="content-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="content-btn btn active-btn animate-btn">Заказать услугу</button>
+          <button type="button" class="content-btn btn active-btn animate-btn" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!-- web-stud-main-content-peculiarity -->
@@ -469,5 +469,18 @@
         </div>
       </div>
     </footer>
+    <!-- web-stud-modal-window -->
+    <section>
+      <div class="content-backdrop is-hidden" data-modal>
+        <div class="content-modal">
+          <button class="content-modal-btn" type="button" data-modal-close>
+            <svg class="content-icon-close">
+              <use href="./images/symbol-defs.svg#icon-close-black-18dp"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
